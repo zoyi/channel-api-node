@@ -1,5 +1,5 @@
 {
-  "name": "channel-api-node",
+  "name": "channel-client",
   "version": "0.1.0",
   "scripts": {
     "test": "mocha --opts tests/mocha.opts tests/**/*-test.ts",
