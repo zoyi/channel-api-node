@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "nock": "registry:npm/nock#0.7.0+20160723033700"
+  }
+}

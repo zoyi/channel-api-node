@@ -36,10 +36,19 @@ Create a client:
 var client = new Channel.Client({ accessKey: 'your_access_key', accessSecret: 'your_access_secret' })
 ```
 
-## Messages
+## Group Messages
 
 ```
-// TODO
+// Send message to group from bot
+var message = {
+    message: 'Hi! I'm bot!'
+}
+
+client.messages.create('group_name', 'bot_name', message).then((body) => {
+    console.log(body)
+}).catch((err) => {
+    console.log(err)
+})
 ```
 
 ## License

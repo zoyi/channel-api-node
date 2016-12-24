@@ -1,5 +1,5 @@
 import * as assert from 'assert';
-import { Client } from '../src'
+import { Client } from '../src';
 
 describe('Client', () => {
     const accessKey = 'accessKey'
