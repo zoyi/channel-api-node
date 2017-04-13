@@ -2,3 +2,5 @@
 --recursive
 --require mocha-clean
 --reporter min
+-R spec
+--ui bdd
