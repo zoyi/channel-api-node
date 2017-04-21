@@ -5,6 +5,8 @@ access:
 id:
   groupId: YOUR_GROUP_ID
   userChatId: YOUR_USER_CHAT_ID
+  userId: YOUR_USER_ID
+  veilId: YOUR_VEIL_ID
 
 path:
   file: YOUR_FILE_PATH

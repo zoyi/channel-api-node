@@ -2,13 +2,17 @@ import * as rp from "request-promise";
 import Bot from "./bot";
 import Group from "./group";
 import Manager from "./manager";
+import User from "./user";
 import UserChat from "./userChat";
+import Veil from "./veil";
 
 export default class Client {
   public bots: Bot;
   public groups: Group;
   public managers: Manager;
+  public users: User;
   public userChats: UserChat;
+  public veils: Veil;
 
   public accessKey: string;
   public accessSecret: string;
@@ -20,8 +24,9 @@ export default class Client {
     this.bots = new Bot(this);
     this.groups = new Group(this);
     this.managers = new Manager(this);
+    this.users = new User(this);
     this.userChats = new UserChat(this);
-
+    this.veils = new Veil(this);
   }
 
   public post(endpoint: string, data: any) {

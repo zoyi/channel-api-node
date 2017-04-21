@@ -4,7 +4,7 @@ import { Client, TestEnv } from "../src";
 describe("Message", () => {
   const testEnv = new TestEnv();
   const client = new Client(testEnv.accessKey, testEnv.accessSecret);
-  const message = {message: "MochaBot test message"};
+  const message = {message: "😊 MochaBot test message"};
 
   describe("Group", () => {
     it("should be created", (done: any) => {
