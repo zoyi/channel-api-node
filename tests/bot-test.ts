@@ -8,7 +8,6 @@ describe("Bot", () => {
   it("should create bot", (done: any) => {
     client.bots.create("제비봇", "https://goo.gl/Xt51OM")
       .then((body: any) => {
-        console.log(body);
         if (body.bot === null) {
           done(body);
         }

@@ -17,7 +17,9 @@ access:
 
 id:
   groupId: YOUR_GROUP_ID
-  userChatId: YOUR_USER_CHAT_ID
+  userChatId: YOUR_USER_CHAT_ID  
+  userId: YOUR_USER_ID
+  veilId: YOUR_VEIL_ID
 
 path:
   file: YOUR_FILE_PATH
@@ -37,16 +39,14 @@ $ npm run build
 
 ## Usage
 
-Require Channel:
+### Require Channel
 
 ```
 var Channel = require('channel-client');
 ```
 
-Create a client:
-
 ### Using Personal Access Key and Access Secret
-
+Create a client.
 ```
 var client = new Channel.Client({
   accessKey: 'your_access_key',
@@ -74,7 +74,56 @@ client.managers.get().then((body) => {
 })
 ```
 
-## Group Messages
+## User
+```
+// List userChats of a user
+client.users.userChats.get('user_id').then((body) => {
+  console.log(body)
+}).catch((err) => {
+  console.log(err)
+})
+
+// Create userChat of a user
+client.users.userChats.create('user_id').then((body) => {
+  console.log(body)
+}).catch((err) => {
+  console.log(err)
+})
+
+// Get a user
+client.users.get('user_id').then((body) => {
+  console.log(body)
+}).catch((err) => {
+  console.log(err)
+})
+```
+
+## Veil
+```
+// List userChats of a veil
+client.veils.userChats.get('veil_id').then((body) => {
+  console.log(body)
+}).catch((err) => {
+  console.log(err)
+})
+
+// Create userChat of a veil
+client.veils.userChats.create('veil_id').then((body) => {
+  console.log(body)
+}).catch((err) => {
+  console.log(err)
+})
+
+// Get a veil
+client.users.get('veil_id').then((body) => {
+  console.log(body)
+}).catch((err) => {
+  console.log(err)
+})
+```
+
+## Group
+### Messages
 
 ```
 // Send a message to group from bot
