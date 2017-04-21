@@ -1,0 +1,10 @@
+access:
+  accessKey: YOUR_ACCESS_KEY
+  accessSecret: YOUR_ACCESS_SECRET
+
+id:
+  groupId: YOUR_GROUP_ID
+  userChatId: YOUR_USER_CHAT_ID
+
+path:
+  file: YOUR_FILE_PATH

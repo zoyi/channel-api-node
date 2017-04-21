@@ -1,5 +1,7 @@
-import Client from './client';
+import Client from "./client";
+import TestEnv from "./testEnv";
 
 export {
-  Client
-}
+  Client,
+  TestEnv,
+};

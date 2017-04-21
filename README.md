@@ -9,15 +9,30 @@ npm install channel-client
 ```
 
 ## Testing
-
+Put values in test_sample.yaml
 ```
-npm test
+access:
+  accessKey: YOUR_ACCESS_KEY
+  accessSecret: YOUR_ACCESS_SECRET
+
+id:
+  groupId: YOUR_GROUP_ID
+  userChatId: YOUR_USER_CHAT_ID
+
+path:
+  file: YOUR_FILE_PATH
+```
+
+Run commands below.
+```
+$ mv test_sample.yaml test.yaml
+$ npm test
 ```
 
 ## Building
 
 ```
-npm run build
+$ npm run build
 ```
 
 ## Usage

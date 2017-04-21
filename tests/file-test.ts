@@ -1,14 +1,15 @@
 import * as assert from "assert";
 import { Client, TestEnv } from "../src";
+import fs = require("fs");
 
-describe("Message", () => {
+describe("File", () => {
   const testEnv = new TestEnv();
   const client = new Client(testEnv.accessKey, testEnv.accessSecret);
-  const message = {message: "MochaBot test message"};
 
   describe("Group", () => {
+    const file = fs.createReadStream(testEnv.filePath);
     it("should be created", (done: any) => {
-      client.groups.messages.create(testEnv.groupId, "MochaBot", message)
+      client.groups.files.create(testEnv.groupId, "MochaBot", file)
         .then((body: any) => {
           if (body.message === null) {
             done(body);
@@ -22,8 +23,9 @@ describe("Message", () => {
   });
 
   describe("UserChat", () => {
+    const file = fs.createReadStream(testEnv.filePath);
     it("should be created", (done: any) => {
-      client.userChats.messages.create(testEnv.userChatId, "MochaBot", message)
+      client.userChats.files.create(testEnv.userChatId, "MochaBot", file)
         .then((body: any) => {
           if (body.message === null) {
             done(body);
